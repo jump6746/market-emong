@@ -16,10 +16,13 @@ fetch('/src/components/footer.html')
     footer.innerHTML = data;
   });
 
-fetch('/src/components/recently.html')
-  .then((res) => res.text())
-  .then((data) => {
-    const recently = document.querySelector('.recently-swiper');
-    recently.innerHTML = data;
-    return import('/src/js/recently.js');
-  });
+// fetch('/src/components/recently.html')
+//   .then((res) => res.text())
+//   .then((data) => {
+//     const recently = document.querySelector('body');
+//     recently.innerHTML = data;
+//     return import('/src/js/recently.js');
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });

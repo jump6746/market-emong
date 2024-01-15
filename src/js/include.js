@@ -16,17 +16,17 @@ fetch('/src/components/footer.html')
     footer.innerHTML = data;
   });
 
-fetch('/src/pages/components/addCart/index.html')
-  .then((response) => response.text())
-  .then((text) => {
-    const cartDialog = document.querySelector('.add-cart-popup');
-    cartDialog.insertAdjacentHTML('afterbegin', text);
+// fetch('/src/pages/components/addCart/index.html')
+//   .then((response) => response.text())
+//   .then((text) => {
+//     const cartDialog = document.querySelector('.add-cart-popup');
+//     cartDialog.insertAdjacentHTML('afterbegin', text);
 
-    return import('/src/pages/components/addCart/addCart.js');
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+//     return import('/src/pages/components/addCart/addCart.js');
+//   })
+//   .catch((error) => {
+//     console.log(error);
+//   });
 
 // fetch('/src/components/recently.html')
 //   .then((res) => res.text())

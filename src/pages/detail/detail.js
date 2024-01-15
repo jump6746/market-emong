@@ -140,11 +140,11 @@ detailList.forEach(
                         class="select-product-count mr-16pxr flex justify-between border border-gray-100 text-center font-semibold text-gray-500"
                       >
                         <button type="button" aria-label="수량내리기" disabled class="minus-button">
-                          <img src="/src/assets/detail-Minus.svg" alt="빼기" />
+                          <img src="/assets/detail-Minus.svg" alt="빼기" />
                         </button>
                         <div class="count items-center text-16pxr">1</div>
                         <button type="button" aria-label="수량올리기" class="plus-button">
-                          <img src="/src/assets/detail-Plus.svg" alt="더하기" />
+                          <img src="/assets/detail-Plus.svg" alt="더하기" />
                         </button>
                       </div>
                     </div>
@@ -191,13 +191,13 @@ detailList.forEach(
                 type="button"
                 class="like-button flex h-54pxr w-54pxr items-center justify-center rounded-sm border border-gray-100 p-4pxr"
               >
-                <img src="/src/assets/Heart.svg" alt="찜하기" class="w-36pxr" />
+                <img src="/assets/Heart.svg" alt="찜하기" class="w-36pxr" />
               </button>
               <button
                 type="button"
                 class="bell-button flex h-54pxr w-54pxr items-center justify-center rounded-sm border border-gray-100 p-4pxr"
               >
-                <img src="/src/assets/Bell.svg" alt="재입고 알림" />
+                <img src="/assets/Bell.svg" alt="재입고 알림" />
               </button>
               <button
                 type="button"

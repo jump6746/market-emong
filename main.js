@@ -125,27 +125,27 @@ productList.forEach(
       discountTag.insertAdjacentHTML('afterend', priceTemplate);
     }
 
-    const saveItem = document.querySelector('.saveItem');
+    // const saveItem = document.querySelector('.saveItem');
 
-    async function saveItemInfo() {
-      try {
-        const getCurrentView = await localStorage.getItem('currentView');
-        const currentData = JSON.parse(getCurrentView);
+    // async function saveItemInfo() {
+    //   try {
+    //     const getCurrentView = await localStorage.getItem('currentView');
+    //     const currentData = JSON.parse(getCurrentView);
 
-        const data = { collectionId, id, photo };
-        currentData.push(data);
+    //     const data = { collectionId, id, photo };
+    //     currentData.push(data);
 
-        await localStorage.setItem('currentView', JSON.stringify(currentData));
-      } catch {
-        const currentData = [];
-        const data = { collectionId, id, photo };
-        currentData.push(data);
+    //     await localStorage.setItem('currentView', JSON.stringify(currentData));
+    //   } catch {
+    //     const currentData = [];
+    //     const data = { collectionId, id, photo };
+    //     currentData.push(data);
 
-        await localStorage.setItem('currentView', JSON.stringify(currentData));
-      }
-    }
+    //     await localStorage.setItem('currentView', JSON.stringify(currentData));
+    //   }
+    // }
 
-    saveItem.addEventListener('click', saveItemInfo);
+    // saveItem.addEventListener('click', saveItemInfo);
   }
 );
 

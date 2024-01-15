@@ -19,7 +19,6 @@ fetch('/src/components/footer.html')
 fetch('/src/pages/components/addCart/index.html')
   .then((response) => response.text())
   .then((text) => {
-    console.log(text);
     const cartDialog = document.querySelector('.add-cart-popup');
     cartDialog.insertAdjacentHTML('afterbegin', text);
 
@@ -32,8 +31,8 @@ fetch('/src/pages/components/addCart/index.html')
 // fetch('/src/components/recently.html')
 //   .then((res) => res.text())
 //   .then((data) => {
-//     const recently = document.querySelector('body');
-//     recently.innerHTML = data;
+//     const recently = document.querySelector('.recently-swiper');
+//     recently.insertAdjacentHTML('afterbegin', data);
 //     return import('/src/js/recently.js');
 //   })
 //   .catch((error) => {

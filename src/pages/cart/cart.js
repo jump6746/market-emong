@@ -24,6 +24,27 @@ document.querySelectorAll('.cart-toggle').forEach(function (toggle) {
 /* -------------------------------------------------------------------------- */
 /*                            cart product list                               */
 /* -------------------------------------------------------------------------- */
+
+const currentUserData = JSON.parse(localStorage.getItem('userAuth'));
+
+const userId = currentUserData.user.id;
+
+const userCarts = await pb.collection('cart').getFullList({
+  filter: `userId = "${userId}"`,
+});
+
+const cartData = [];
+
+userCarts.forEach((userCart) => {
+  cartData.push({ productId: userCart.productId, count: userCart.count });
+});
+
+console.log(cartData);
+
+for await (const data of cartData) {
+  const productData = await pb.collection('product').getOne(data.productId);
+  console.log(productData);
+}
 // test 유저 등록 -> 로그인 후 로그인 유저 정보 랜더링
 const userAddress = await pb.collection('users').getOne('6kki52fp9i5fmjy');
 const { address } = userAddress;

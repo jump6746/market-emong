@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import '/src/styles/tailwind.css';
 import '/src/styles/product.css';
-import { getPbImageURL, pb, setStorageDay, compareDay } from '/src/lib/';
+import { getPbImageURL, pb, setStorageDay, compareDay, comma } from '/src/lib/';
 
 // pb 통신
 
@@ -89,7 +89,7 @@ productList.forEach(
         </div>
         <span class="name"> [${brand}]${name} </span>
         <span class="discount-price">
-          ${discountPrice}원
+          ${comma(discountPrice)}원
         </span>
         <span class="label">${label}</span>
       </a>
@@ -113,7 +113,7 @@ productList.forEach(
     const discountTag = document.querySelector('.discount-price');
 
     const priceTemplate = /* html */ `
-      <span class="price">${price}</span>
+      <span class="price">${comma(price)}원</span>
     `;
 
     const discountTemplate = /* html */ `
@@ -167,7 +167,7 @@ kitList.forEach(
         </div>
         <span class="name"> [${brand}]${name} </span>
         <span class="discount-price-kit">
-          ${discountPrice}원
+        ${comma(discountPrice)}원
         </span>
         <span class="label">${label}</span>
       </a>
@@ -189,7 +189,7 @@ kitList.forEach(
 
     const discountTag = document.querySelector('.discount-price-kit');
     const priceTemplate = /* html */ `
-      <span class="price">${price}</span>
+      <span class="price">${comma(price)}원</span>
     `;
 
     const discountTemplate = /* html */ `

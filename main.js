@@ -28,6 +28,7 @@ const todayBtn = document.querySelector('.todayButton');
 const closeBtn = document.querySelector('.closeButton');
 const product = document.querySelector('.product-list');
 const kit = document.querySelector('.kit-list');
+const cartDialog = document.querySelector('.add-cart-popup');
 
 // 팝업창 기능 구현
 
@@ -92,7 +93,7 @@ productList.forEach(
         </span>
         <span class="label">${label}</span>
       </a>
-      <button type="button">
+      <button type="button" class="modal-button">
         <img src="/assets/product-cart.svg" alt="장바구니 담기" />
       </button>
     </li>
@@ -251,3 +252,17 @@ const kitSwiper = new Swiper('.swiper-kit', {
 });
 
 // 최근 본 상품
+
+// 모달창
+
+const buttons = document.querySelectorAll('.modal-button');
+
+function openModal(e) {
+  e.preventDefault();
+
+  cartDialog.showModal();
+}
+
+buttons.forEach((button) => {
+  button.addEventListener('click', openModal);
+});

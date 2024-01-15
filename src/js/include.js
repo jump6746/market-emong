@@ -27,11 +27,3 @@ fetch('/src/components/footer.html')
 //   .catch((error) => {
 //     console.log(error);
 //   });
-
-// fetch('/src/components/recently.html')
-//   .then((res) => res.text())
-//   .then((data) => {
-//     const recentlySwiper = document.querySelector('.recently-swiper');
-//     recentlySwiper.innerHTML = data;
-//     return import('/src/js/recently.js');
-//   });

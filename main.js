@@ -124,28 +124,6 @@ productList.forEach(
       discountTag.insertAdjacentHTML('afterbegin', discountTemplate);
       discountTag.insertAdjacentHTML('afterend', priceTemplate);
     }
-
-    // const saveItem = document.querySelector('.saveItem');
-
-    // async function saveItemInfo() {
-    //   try {
-    //     const getCurrentView = await localStorage.getItem('currentView');
-    //     const currentData = JSON.parse(getCurrentView);
-
-    //     const data = { collectionId, id, photo };
-    //     currentData.push(data);
-
-    //     await localStorage.setItem('currentView', JSON.stringify(currentData));
-    //   } catch {
-    //     const currentData = [];
-    //     const data = { collectionId, id, photo };
-    //     currentData.push(data);
-
-    //     await localStorage.setItem('currentView', JSON.stringify(currentData));
-    //   }
-    // }
-
-    // saveItem.addEventListener('click', saveItemInfo);
   }
 );
 
@@ -219,8 +197,8 @@ const adverSwiper = new Swiper('.swiper-advertising', {
     el: '.swiper-pagination',
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.main-prev',
+    prevEl: '.main-next',
   },
   keyboard: {
     enabled: true,
